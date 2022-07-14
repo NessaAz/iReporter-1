@@ -45,21 +45,13 @@ hr {
 ::placeholder {
   font-family: 'Poppins', sans-serif;
   font-size: smaller;
-  /* font-weight: bolder;   */
 }
 form{
   font-family: 'Poppins', sans-serif;
   font-size: smaller;
   font-weight: bolder;
 }
-/* .panel-heading::after {
-  border-bottom: 0.2em solid #FFB4A2;
-  content:"";
-  display:block;
-  width: 9em;
-  max-width:80%;
-  margin: 0.4em auto 0.4em;
- } */
+
 .post-btn {
   font-family: 'Poppins', sans-serif;
   font-size: small;
@@ -78,9 +70,6 @@ img{
   height: 570px;
   width: 450px;
   object-fit: fill;
-  /* padding-bottom: 12px;  */
-  /* margin-right: 20%; */
-  /* margin-top: 2%; */
 }
 a {
   color: #fe6f62;
@@ -172,63 +161,6 @@ a {
   border: 2px solid #ff5050
 }
 
-/* .note-has-grid .single-note-item.all-category .point {
-  color: rgba(82, 95, 127, .5)
-}
-
-.note-has-grid .single-note-item.note-business .point {
-  color: rgba(44, 208, 126, .5)
-}
-
-.note-has-grid .single-note-item.note-business .side-stick {
-  background-color: rgba(44, 208, 126, .5)
-}
-
-.note-has-grid .single-note-item.note-business .category .category-business {
-  display: inline-block
-}
-
-.note-has-grid .single-note-item.note-favourite .favourite-note {
-  color: #ffc107
-}
-
-.note-has-grid .single-note-item.note-social .point {
-  color: rgba(44, 171, 227, .5)
-}
-
-.note-has-grid .single-note-item.note-social .side-stick {
-  background-color: rgba(44, 171, 227, .5)
-}
-
-.note-has-grid .single-note-item.note-social .category .category-social {
-  display: inline-block
-}
-
-.note-has-grid .single-note-item.note-important .point {
-  color: rgba(255, 80, 80, .5)
-}
-
-.note-has-grid .single-note-item.note-important .side-stick {
-  background-color: rgba(255, 80, 80, .5)
-}
-
-.note-has-grid .single-note-item.note-important .category .category-important {
-  display: inline-block
-}
-
-.note-has-grid .single-note-item.all-category .more-options,
-.note-has-grid .single-note-item.all-category.note-favourite .more-options {
-  display: block
-}
-
-.note-has-grid .single-note-item.all-category.note-business .more-options,
-.note-has-grid .single-note-item.all-category.note-favourite.note-business .more-options,
-.note-has-grid .single-note-item.all-category.note-favourite.note-important .more-options,
-.note-has-grid .single-note-item.all-category.note-favourite.note-social .more-options,
-.note-has-grid .single-note-item.all-category.note-important .more-options,
-.note-has-grid .single-note-item.all-category.note-social .more-options {
-  display: none
-} */
 
 @media (max-width:767.98px) {
   .note-has-grid .single-note-item {

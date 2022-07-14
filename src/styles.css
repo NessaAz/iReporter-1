@@ -183,22 +183,6 @@ body {
 }
 
 
-
-
-
-/* end of navbar */
-
-
-
-#landing {
-	height: 100vh;
-	background: rgba(0, 0, 0);
-  background: url(/assets/ireport5.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 35px  20px;
-}
-
 .has-fade {
     visibility: hidden;
   }

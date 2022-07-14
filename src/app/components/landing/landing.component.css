@@ -1,4 +1,3 @@
-/* landing */
 #landing {
 	height: 100vh;
 	background: rgba(0, 0, 0);
@@ -8,13 +7,7 @@
 	background-position: center center;
 }
 
-/* @media (max-width: 63.9375em) {
-  #landing {
-    display: none;
-  }
-} */
 
-/* hero */
 .hero {
   background-color: #6D6875;
 }
@@ -37,11 +30,7 @@
   }
 }
 
-/* end of hero */
 
-
-
-  /* FEATURE */
   .feature {
     
     text-align: center;
@@ -103,10 +92,7 @@
     font-size: 0.875rem;
     line-height: 1.5;
   }
-  /* end of feature */
 
-
-/* article */
 .articles {
     background-color: #FAEDCD;
     color: black;
@@ -165,9 +151,7 @@
   .article__description {
     font-size: 0.8125rem;
   }
- /* end of aticle */
 
-  /* footer */
   .footer {
     background-color: #453b4c;
     color: white;
@@ -287,135 +271,7 @@
     font-size: 0.875rem;
   }
 
-  /* end of footer */
-
-
-
-  /* buttons */
-  button,
-  .button {
-    position: relative;
-    display: inline-block;
-    padding: 0.875rem 2.1875rem;
-    background-image: linear-gradient(to right, #B5838D, #6D6875);
-    border: 0;
-    border-radius: 50px;
-    cursor: pointer;
-    color: white; 
-    font-size: 0.875rem;
-    transition: opacity 300ms ease-in-out;
-    overflow: hidden;
-  }
-  button::before,
-  .button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.25);
-    opacity: 0;
-    transition: opacity 150ms ease-in-out;
-  }
-  button:hover::before,
-  .button:hover::before {
-    opacity: 1;
-  }
-  /* end of buttons */
-
-  /* media queries*/
-  @media (max-width: 63.9375em) {
-    .hide-for-mobile {
-      display: none;
-    }
-  }
-  
-  @media (min-width: 64em) {
-    .hide-for-desktop {
-      display: none;
-    }
-  }
-  @media (min-width: 64em) {
-    .container--pb {
-      padding-bottom: 6rem;
-    }
-  }
-  @media (min-width: 64em) {
-    .container--pt {
-      padding-top: 6rem;
-    }
-  }
-  @media (min-width: 64em) {
-    .container--py {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
-    }
-  }
-  @media (min-width: 64em) {
-    .container--pall {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
-    }
-  }
-  @media (min-width: 64em) {
-    h2 {
-      font-size: 2.25rem;
-      margin-bottom: 2.25rem;
-    }
-  }
-  @media (min-width: 64em) {
-    h1 {
-      font-size: 3.25rem;
-    }
-  }
-  @media (min-width: 64em) {
-    body {
-      font-size: 1.125rem;
-    }
-  }
-  /* end of media queries */
-
-
-  /* container */
-  .container {
-    max-width: 69.375rem;
-    margin: 0 auto;
-  }
-  .container--pall {
-    padding-top: 4.375rem;
-    padding-right: 1.5rem;
-    padding-bottom: 4.375rem;
-    padding-left: 1.5rem;
-  }
-
-  .container--py {
-    padding-top: 4.375rem;
-    padding-bottom: 4.375rem;
-  }
-
-  .container--px {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-  }
-  .container--pt {
-    padding-top: 4.375rem;
-  }
-
-  .container--pr {
-    padding-right: 1.5rem;
-  }
-  .container--pb {
-    padding-bottom: 4.375rem;
-  }
- 
-  .container--pl {
-    padding-left: 1.5rem;
-  }
-  /* end of container */
-
-  /* general */
-  html {
+    html {
     font-size: 100%;
     box-sizing: border-box;
   }
@@ -437,118 +293,4 @@
     overflow: hidden;
   }
   
-  h1,
-  h2,
-  h3 {
-    line-height: 1.15;
-    color: #2d314d;
-    margin-top: 0px;
-  }
   
-  h1 {
-    font-size: 2.31rem;
-    margin-bottom: 1.5rem;
-  }
-
-  
-  h2 {
-    font-size: 1.875rem;
-    margin-bottom: 1.5625rem;
-  }
-
-  
-  p {
-    line-height: 1.5;
-    margin-bottom: 2.25rem;
-  }
-  
-  a,
-  a:visited,
-  a:hover {
-    text-decoration: none;
-  }
-    
-  .flex {
-    display: flex;
-  }
-  .flex-jc-sb {
-    justify-content: space-between;
-  }
-  .flex-jc-c {
-    justify-content: center;
-  }
-  .flex-ai-c {
-    align-items: center;
-  }
-  .has-fade {
-    visibility: hidden;
-  }
-  
-  @-webkit-keyframes fade-in {
-    from {
-      visibility: hidden;
-      opacity: 0;
-    }
-    1% {
-      visibility: visible;
-      opacity: 0;
-    }
-    to {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fade-in {
-    from {
-      visibility: hidden;
-      opacity: 0;
-    }
-    1% {
-      visibility: visible;
-      opacity: 0;
-    }
-    to {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-  .fade-in {
-    -webkit-animation: fade-in 200ms ease-in-out forwards;
-            animation: fade-in 200ms ease-in-out forwards;
-  }
-  
-  @-webkit-keyframes fade-out {
-    from {
-      visibility: visible;
-      opacity: 1;
-    }
-    99% {
-      visibility: visible;
-      opacity: 0;
-    }
-    to {
-      visibility: hidden;
-      opacity: 0;
-    }
-  }
-  
-  @keyframes fade-out {
-    from {
-      visibility: visible;
-      opacity: 1;
-    }
-    99% {
-      visibility: visible;
-      opacity: 0;
-    }
-    to {
-      visibility: hidden;
-      opacity: 0;
-    }
-  }
-  .fade-out {
-    -webkit-animation: fade-out 200ms ease-in-out forwards;
-            animation: fade-out 200ms ease-in-out forwards;
-  }
-  /* end of general */
