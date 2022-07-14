@@ -1,0 +1,121 @@
+<div class="container">
+  <div class="row">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+      <div class="page-content container note-has-grid">
+
+        <div class="tab-content bg-transparent">
+          <div id="note-full-container" class="note-has-grid row" >
+            <div class="col-md-4 single-note-item all-category note-important" *ngFor="let post of posts">
+              <div class="card card-body">
+                <span class="side-stick"></span>
+                <h5 class="note-title text-truncate w-75 mb-0" (click)="interventionClicked(post)">{{post.title}} <i class="point fa fa-circle ml-1 font-10"></i></h5>
+                <img 
+                     [src] = "post.image"
+                     alt="{{ post.image }}" 
+                     class="img-responsive" 
+                     style="max-height: 150px; max-width: 300px;"> 
+                <p class="note-date font-small text-muted">{{post.created |time}}</p>
+                <div class="note-content">
+                  <p class="note-inner-content text-muted" >{{post.info}}</p>
+                  <button class="btn btn-success btn-sm m-3" *ngIf="selectedPost.id != -1" (click)="updatePost()">UPDATE</button>
+                  <!-- <button class="btn btn-success btn-sm m-3" *ngIf="selectedPost.id == -1" (click)="createPost()">POST</button> -->
+                  <button class="btn btn-danger btn-sm m-3" *ngIf="selectedPost.id != -1" (click)="deletePost()">DELETE</button>
+                </div>
+                <div class="d-flex align-items-center">
+                  <span class="mr-1"><i class="fa fa-star favourite-note"></i></span>
+                  <span class="mr-1"><i class="fa fa-trash remove-note"></i></span>
+                  <div class="ml-auto">
+                    <div class="category-selector btn-group">
+                      <a class="nav-link dropdown-toggle category-dropdown label-group p-0" data-toggle="dropdown" #status href="#" role="button" aria-haspopup="true" aria-expanded="true">
+                        <div class="category">
+                          <!-- <label for="status">Status</label> -->
+                          <button class="btn  btn-primary status-btn btn-sm mt-3">Status</button>
+                          <span class="more-options text-dark"><i class="icon-options-vertical"></i></span>
+                        </div>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right category-menu">
+                        <a class="note-business badge-group-item badge-business dropdown-item position-relative category-business text-success" href="javascript:void(0);">
+                          <i class="mdi mdi-checkbox-blank-circle-outline mr-1"></i>Investigation
+                        </a>
+                        <a class="note-social badge-group-item badge-social dropdown-item position-relative category-social text-info" href="javascript:void(0);">
+                          <i class="mdi mdi-checkbox-blank-circle-outline mr-1"></i> Resolved
+                        </a>
+                        <a class="note-important badge-group-item badge-important dropdown-item position-relative category-important text-danger" href="javascript:void(0);">
+                          <i class="mdi mdi-checkbox-blank-circle-outline mr-1"></i>Rejected
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Add notes -->
+
+      </div>
+
+  <hr>
+
+  <div class="col-lg-6 col-md-4 col-sm-12">
+    <div class="panel panel-default redflag-body">
+      <div class="panel-heading">
+        <h4 class="text-center"> Update an Intervention </h4>
+      </div>
+      <div class="panel-body">
+    <form>
+    <div class="form-group col-lg-12 col-md-12 col-sm-12 posts">
+      <label class="label" for="image">Post Image</label>
+      <input [(ngModel)]="selectedPost.image" [ngModelOptions]="{standalone: true}"type="file" #image>
+    </div>
+    <div class="form-group col-lg-12 col-md-12 col-sm-12 posts">
+      <label class="label" for="title">Post Title</label>
+      <input [(ngModel)]="selectedPost.title" [ngModelOptions]="{standalone: true}" type="text" #title class="form-control" id="title" placeholder="Post title">
+    </div>
+    <div class="form-group col-lg-12 col-md-12 col-sm-12 posts">
+      <label class='label'for="info">Info</label>
+      <input [(ngModel)]="selectedPost.info" [ngModelOptions]="{standalone: true}" type="text" #desc class="form-control" id="desc" placeholder="Info">
+      </div>
+      <div class="form-group col-lg-12 col-md-12 col-sm-12 posts">
+        <label class='label'for="password">Location</label>
+        <input [(ngModel)]="selectedPost.location" [ngModelOptions]="{standalone: true}" type="text" #year class="form-control" id="year" placeholder="Location">
+      </div>
+      <button class="btn btn-primary btn-sm m-3" *ngIf="selectedPost.id != -1" (click)="updatePost()">UPDATE</button>
+      <!-- <button class="btn btn-primary post btn-sm m-3" *ngIf="selectedPost.id == -1" (click)="createPost()">POST</button> -->
+      <button class="btn btn-danger btn-sm m-3" *ngIf="selectedPost.id != -1" (click)="deletePost()">DELETE</button>
+  </form>
+  </div>
+  </div>
+</div>
+
+<div class="col-lg-6 col-md-6 col-sm-12">
+  <div class="panel panel-default redflag-body">
+    <div class="panel-heading">
+      <h4 class="text-center"> Add a Intervention</h4>
+    </div>
+    <div class="panel-body">
+  <form>
+  <div class="form-group col-lg-12 col-md-12 col-sm-12 posts">
+    <label class="label" for="image">Title:</label>
+    <input  (change)="onImageChanged($event)" type="file" #image>
+  </div>
+  <div class="form-group col-lg-12 col-md-12 col-sm-12 posts">
+    <label class="label" for="title">Post Title</label>
+    <input  type="text" (change)="onDetailsChanged($event)" #title class="form-control" id="title" placeholder="Post title">
+  </div>
+  <div class="form-group col-lg-12 col-md-12 col-sm-12 posts">
+    <label class='label'for="info">Info</label>
+    <input  (change)="onInfoChanged($event)"  type="text" #desc class="form-control" id="desc" placeholder="Info">
+    </div>
+    <div class="form-group col-lg-12 col-md-12 col-sm-12 posts">
+      <label class='label'for="password">Location</label>
+      <input  (change)="onLocationChanged($event)" type="text" #year class="form-control" id="year" placeholder="Location">
+    </div>
+    <!-- <button class="btn btn-primary btn-sm m-3" *ngIf="selectedPost.id != -1" (click)="updatePost()">PUT</button> -->
+    <button class="btn btn-primary post btn-sm m-3" (click)="createPost()">POST</button>
+    <!-- <button class="btn btn-danger btn-sm m-3" *ngIf="selectedPost.id != -1" (click)="deletePost()">DELETE</button> -->
+</form>
+</div>
+</div>
+</div>
+

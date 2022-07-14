@@ -1,0 +1,37 @@
+<div class="container-fluid signup page">
+    <div class="row">
+      
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="image fluid">
+          <img src="assets/adminsignup.jpg" alt="">
+        </div>
+      </div>
+  
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="panel panel-default signup-body">
+          <div class="panel-heading">
+            <h4 class="text-center">Create Admin Account</h4>
+          </div>
+          <div class="panel-body">
+            <form>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 login">
+                  <label class="label" for="username">UserName</label>
+                  <input [(ngModel)]="register.username" [ngModelOptions]="{standalone: true}"type="text" #username class="form-control" id="firstname" placeholder="Username">
+                </div>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 login">
+                  <label class="label" for="username">Email Address</label>
+                  <input [(ngModel)]="register.email" [ngModelOptions]="{standalone: true}" type="email" #email class="form-control" id="email" placeholder="Email Address">
+                </div>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 login">
+                  <label class='label'for="password">Password</label>
+                  <input [(ngModel)]="register.password" [ngModelOptions]="{standalone: true}" type="password" #password class="form-control" id="password" placeholder="Password">
+                  </div>
+                  <div class="form-group col-lg-12 col-md-12 col-sm-12 login">
+                    <label class='label'for="password">Confirm Password</label>
+                    <input [(ngModel)]="register.password2" [ngModelOptions]="{standalone: true}" type="password" #password2 class="form-control" id="password" placeholder="Confirm Password">
+                    <input type="submit" class="btn  btn-primary login-btn btn-sm mt-3" (click)="registerUser()" value="Create account">
+                  </div>
+              </form>
+      </div>
+    </div>
+  </div>

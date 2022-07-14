@@ -1,0 +1,65 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins';
+    color: #fe6f62 
+}
+.label{
+    font-family: 'Poppins'; 
+}
+.signup-body {
+    width: 350px;
+    margin-top: 13%;
+    margin-left: 28%;
+    padding-top: 10%;
+    padding: 7%;
+    box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
+    /* background-color: #C7C7BB; */
+}
+.login-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    font-weight: 600;
+    width: 120px;
+    border-radius: 0%;
+    border: 2px solid #fe6f62;
+    background-color: #E5E5E5;
+    color: black;
+    padding: 2%;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+}
+.login-btn:hover {
+    color: #fe6f62;
+    border: 2px solid black;
+    background-color: #E5E5E5;
+    transition: 250ms;
+}
+::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: smaller;
+    /* font-weight: bolder;   */
+}
+form{
+    font-family: 'Poppins', sans-serif;
+    font-size: smaller;
+    font-weight: bolder;    
+}
+a {
+    color: #fe6f62;
+    text-decoration: none;
+}
+.panel-heading{
+    text-align: center;
+}
+img{
+    height: 635px;
+    width: 790px;
+    /* padding-bottom: 12px;  */
+    /* margin-right: 20%; */
+    /* margin-top: 2%; */
+  }
